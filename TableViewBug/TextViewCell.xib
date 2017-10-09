@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="yfZ-w8-yrN" customClass="TextViewCell" customModule="TableViewBug" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="52"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yfZ-w8-yrN" id="JKB-t3-mYZ">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="51.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text view:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1VL-gA-D29">
+                        <rect key="frame" x="6" y="15" width="76" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lbE-4h-YFz">
+                        <rect key="frame" x="90" y="0.0" width="270" height="52"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="52" id="zaB-I8-1Jc"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="lbE-4h-YFz" firstAttribute="top" secondItem="JKB-t3-mYZ" secondAttribute="top" id="HOu-d2-pe4"/>
+                    <constraint firstItem="1VL-gA-D29" firstAttribute="centerY" secondItem="JKB-t3-mYZ" secondAttribute="centerY" id="Qut-me-N7B"/>
+                    <constraint firstItem="lbE-4h-YFz" firstAttribute="leading" secondItem="1VL-gA-D29" secondAttribute="trailing" constant="8" id="RrB-UO-p0f"/>
+                    <constraint firstAttribute="trailing" secondItem="lbE-4h-YFz" secondAttribute="trailing" constant="15" id="TGN-RM-apU"/>
+                    <constraint firstItem="1VL-gA-D29" firstAttribute="leading" secondItem="JKB-t3-mYZ" secondAttribute="leading" constant="6" id="l2e-hR-x9r"/>
+                    <constraint firstAttribute="bottom" secondItem="lbE-4h-YFz" secondAttribute="bottom" id="rpL-ck-e95"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="textView" destination="lbE-4h-YFz" id="Cio-Rm-a3P"/>
+            </connections>
+            <point key="canvasLocation" x="192" y="195"/>
+        </tableViewCell>
+    </objects>
+</document>
