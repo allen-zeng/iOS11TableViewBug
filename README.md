@@ -1,9 +1,12 @@
-# The bug
+# UPDATE
+This bug no longer exists in iOS 11.2+.
+
+## The bug
 When using Autolayout for a `UITableView` that has cells that resize based on their contents, it's possible to reload the table view so that the existing section headers and some cells stay on the table view, rather than being reused.
 
 The headers and cells sticking around are not useful - the table view and the view controller no longer have a reference to them, which essentially makes them "leak".
 
-# Steps to reproduce
+## Steps to reproduce
 1. Clone the project
 2. Run it against an iOS 11 simulator
 3. Tap "Add text field" on the top right
